@@ -1,8 +1,11 @@
 *{
     margin: 0;
     padding: 0;
-    box-sizing: border-box;
+    box-sizing: border-box; 
     font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    overflow-y: auto;
+    max-width: 100%;
+    overflow-x: hidden;
 }
 
 .header{
@@ -11,6 +14,7 @@
     width: 100%;
     justify-content: space-between;
     padding: 28px;
+    column-gap: 32px;
 }
 .hero{
     color: #F9FAF8;
@@ -24,10 +28,12 @@
 
 button{
     background-color: #3882F6;
-    padding: 8px 24px;
+    padding: 8px 20px;
     border-radius: 8px;
-    color: #E5E7EB;
+    color: #E5E7EB; 
     border: none;
+    font-weight: 500;
+    font-size: 14px;
 }
 .links{
     justify-self: flex-end;
@@ -35,6 +41,12 @@ button{
 
 ul{
     display: inline;
+    list-style-type: none;
+}
+
+a{
+    color: #E5E7EB;
+    text-decoration: none;
 }
 
 .header,.container2,.footer{
@@ -44,33 +56,31 @@ ul{
 .header-logo{
     color: #F9FAF8;
     font-size: 24px;
+    font-weight: bold;
 }
 
 .container2{
     display: flex;
     justify-content: space-evenly;
-    height: 350px;
-    gap: 24px;
-    padding: 70px;
-    flex: 1,0,1;
+    height: 600px;
+    padding: 30px;
+    border: #3882F6 dashed;
+    align-items: stretch;
 }
 
 .information{
-    text-wrap: wrap;
-    flex-grow: 1;
-    flex-basis: 500px;
-    height: 230px;
-    justify-content: space-between;
-    gap: 10px;
+    border: #3882F6 solid;
+    flex: 1;
+    margin-right: 60px;
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
 }
 
 .image{
     display: flex;
-    flex-grow: 1;
-    flex-basis: 350px;
-    height: 230px;
-    background-color: black;
-
+    border:blue solid ;
+    flex: 1;
 }
 
 .container3{
@@ -78,12 +88,24 @@ ul{
     display: flex;
     text-align: center;
     flex-direction: column;
-    height: 300px;
+    height: 450px;
     align-items: center;
+    justify-content: space-between;
+}
+
+.wrapper{
+    display: flex;
+    border: 1px #3882F6 dashed;
+    flex-direction: column;
+    text-align: center;
+    width: 215px;
+    height: 290px;
+    flex-wrap: nowrap;
+    margin: 24px;
+    
 }
 
 .infocontainer{
-    flex: 1;
     font-weight: 900;
     font-size: 36px;
 }
@@ -92,27 +114,100 @@ ul{
     display: flex;
     justify-content: space-evenly;
     align-self: center;
-    flex: 2;
+    flex: 1;
+    padding: 20px;
+    margin: 8px;
+    color: grey;
+    
 }
 
 .box{
     border: #3882F6 solid;
-    width: 100px;
-    height: 100px;
+    width: 200px;
+    height: 200px;
+    align-self: center;
+    border-radius: 15px;
+}
+.box img{
+    width: 100%;
+    width: 100%;
 }
 
 .container4{
+    display: flex;
     background-color: #E5E7EB;
     text-align: center;
-    height: 250px;
+    height: 500px;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
 }
+
+.quotes{
+    border: 1px #3882F6 solid;
+    font-size: 36px;
+    font-style: italic;
+    width: 800px;
+    text-justify: distribute-all-lines;
+    
+}
+
+.citation{
+    border: 1px #3882F6 solid;
+    font-weight: 900;
+    text-align: end;
+    width: 800px;
+    font-size: 18px;
+}
+
 
 .container5{
     margin-bottom: 0px;
+    height: 300px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.signup{
+    display: flex;
+    background-color: #3882F6;
+    border-radius: 10px;
+    padding: 60px;
+    width: 1000px;
+}
+
+.para{
+    color: white;
+    font-weight: 800;
+    font-size: 18px;
+}
+
+.lp{
+    border: 1px white solid;
+    flex-grow: 2;
+    margin-left: 48px;
+    color: #E5E7EB;
+}
+
+.button1{
+    display: flex;
+    border: 1px white solid;
+    flex-grow: 1;
+    flex-direction: column;
+    justify-content: end;
+}
+
+.button_class{
+    border: 1px white solid;
+    padding: 4px 20px;
+    border-radius: 8px;
+    color: white;
+    font-weight: 700;
 }
 
 .footer{
-    position: fixed;
+    position: relative;
     width: 100%;
     bottom: 0;
     text-align: center;
